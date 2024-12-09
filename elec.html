@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electronics Item</title>
+    <link rel="stylesheet" href="elec.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="body">
+    <header>
+      <div class="icon">
+        <i id="menu_bar" class="fa-solid fa-bars"></i>
+      </div>
+      <div class="title-info">
+        <img src="images/logo.png" alt="" />
+        <h2>Platzi Store</h2>
+      </div>
+      <div class="navbar" id="nav_link">
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+      </div>
+      <div class="display">
+        <!-- <button id="dark" onclick="darkMode()">Dark</button> -->
+        <i
+          id="light"
+          style="display: none"
+          onclick="lightMode()"
+          class="fas fa-sun"
+        ></i>
+        <i id="dark" onclick="darkMode()" class="fas fa-moon"></i>
+
+        <!-- <button id="light" style="display: none" onclick="lightMode()">
+          Light
+        </button> -->
+      </div>
+      <div class="second-icon">
+        <i
+          onclick="openCart()"
+          id="cart-icon"
+          class="fa-solid fa-cart-shopping"
+        ></i>
+        <span id="cart_count">0</span>
+      </div>
+    </header>
+    <main class="container">
+      <div class="container_title">
+        <h3>Get products</h3>
+      </div>
+      <div id="products-container">
+        <div
+          class="card-box"
+          data-id="1"
+          data-name="China T-shirt"
+          data-price="600"
+        >
+          <div class="image">
+            <img src="images/pp1.jpeg" alt="" />
+          </div>
+          <h4>China T-shirt</h4>
+          <p>600 taka</p>
+          <button onclick="addToCart(this)">Add Cart</button>
+        </div>
+        <div
+          class="card-box"
+          data-id="10"
+          data-name="Premium Hoodie Dark Orange"
+          data-price="2600"
+        >
+          <div class="image">
+            <img src="images/pp2.jpeg" alt="" />
+          </div>
+          <h4>China Premium Hoodie Dark Orange</h4>
+          <p>2600 taka</p>
+          <button onclick="addToCart(this)">Add Cart</button>
+        </div>
+        <div
+          class="card-box"
+          data-id="2"
+          data-name="Premium Hoodie Light Gray"
+          data-price="2600"
+        >
+          <div class="image">
+            <img src="images/pp3.jpeg" alt="" />
+          </div>
+          <h4>China Premium Hoodie Light Gray</h4>
+          <p>2600 taka</p>
+          <button onclick="addToCart(this)">Add Cart</button>
+        </div>
+        <div
+          class="card-box"
+          data-id="12"
+          data-name="Premium Hoodie Dark Gray"
+          data-price="2600"
+        >
+          <div class="image">
+            <img src="images/pp4.jpeg" alt="" />
+          </div>
+          <h4>China Premium Hoodie Dark Gray</h4>
+          <p>2600 taka</p>
+          <button onclick="addToCart(this)">Add Cart</button>
+        </div>
+      </div>
+    </main>
+    <!-- shopping cart -->
+    <div id="shopping_cart-container">
+      <h2>Your Cart</h2>
+      <ul id="cart_items"></ul>
+      <p id="total">Total: <span id="total_price">0</span></p>
+      <button>Buy Now</button>
+      <button onclick="closeCart()">Close Cart</button>
+    </div>
+    <script src="elec.js"></script>
+  </body>
+</html>
